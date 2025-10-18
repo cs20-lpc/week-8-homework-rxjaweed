@@ -1,5 +1,6 @@
 #include <iostream>
 #include "LinkedListStack.hpp"
+#include "Stack.hpp"
 using namespace std;
 
 int main() {
@@ -10,6 +11,8 @@ int main() {
     list.push(20);
     list.push(30);
     list.print();  // should show 30, 20, 10
+    cout << "Getting length..." << endl;
+    cout << list.getLength() << endl;
 
     cout << "Peek top element: " << list.peek() << endl;
 

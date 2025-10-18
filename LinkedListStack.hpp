@@ -18,6 +18,7 @@ template <typename T>
 class LinkedListStack : public Stack<T> {
 private:
     Node<T> * top; // points to the top node of stack
+    int length;
 
     // copy the state of the argument stack to `this`
     void copy(const LinkedListStack<T>&);

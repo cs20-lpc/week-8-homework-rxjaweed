@@ -2,6 +2,7 @@ template <typename T>
 LinkedListStack<T>::LinkedListStack()
 { 
     top = nullptr;
+    length = 0;
 }
 
 template <typename T>
@@ -88,6 +89,7 @@ void LinkedListStack<T>::pop() {
     Node<T>* current = top;
     top = top->next;
     delete current;
+    length--;
 
     
     
@@ -97,7 +99,9 @@ template <typename T>
 void LinkedListStack<T>::push(const T& elem) {
      Node<T>* newNode = new Node<T> (elem);
      newNode->next = top;
-     top = newNode;
+     top = newNode; 
+     length++;
+  
 }
 
 template <typename T>
